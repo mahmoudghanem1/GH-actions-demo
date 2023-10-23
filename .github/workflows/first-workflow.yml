@@ -1,31 +1,31 @@
 name: first workflow
+
 on:
-  workflow_dispatch:
-    inputs:
-      versionName:
-        required: true
-        descriptions: "this is version name for github work flow "
 
-    # repository_dispatch:
-    #   types: [test]
-    # push:
-    #     branches:
-    #         - "main"
+name: first workflow
+
+on:
+
+  repository_dispatch:
+
+    types: [build]
+
 jobs:
-    first-workflow-job:
-        name: first job
-        runs-on: ubuntu-latest
-        steps:
-            - name: before checkout actions 
-              run:  ls
-              shell: bash
 
-            - name: checkout steps
-              uses: actions/checkout@v3 
-              
-            - name: after checkout action
-              run:  ls
-              shell: bash   
+  First-workflow-job:
 
+    name: first job
 
+    runs-on: ubuntu-latest
 
+    steps:
+
+      - name: checkout steps
+
+        uses: actions/checkout@v3
+
+      - name: run maven 
+
+        run: mvn clean package
+
+         shell: bash
