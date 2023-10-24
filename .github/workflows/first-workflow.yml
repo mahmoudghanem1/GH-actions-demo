@@ -7,7 +7,7 @@ on:
   #       description: "this is version name of github workflow"
     # repository_dispatch:
     #   types: [test]
-  push
+  push:
   
       branches:
           - "main"
