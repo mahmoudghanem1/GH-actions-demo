@@ -9,8 +9,8 @@ on:
     #   types: [test]
   push
   
-  #     branches:
-  #         - "main"
+      branches:
+          - "main"
   
 jobs:
     first-workflow-job:
