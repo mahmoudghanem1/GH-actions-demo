@@ -23,7 +23,7 @@ jobs:
             - name: check node version
               run: node -v
             - name: before checkout actions 
-              if: github.ref == 'refs/head/feature'
+              if: github.ref == 'refs/head/main'
               run:  ls
               shell: bash
 
