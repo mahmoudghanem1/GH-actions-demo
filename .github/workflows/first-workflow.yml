@@ -7,15 +7,16 @@ on:
   #       description: "this is version name of github workflow"
     # repository_dispatch:
     #   types: [test]
-  push:
+  push
   
-      branches:
-          - "main"
+      # branches:
+      #     - "main"
   
 jobs:
     first-workflow-job:
         name: first job
-        
+        if: github.ref == 'refs/head/main'
+
         runs-on: ubuntu-latest
         # container:
         #   image: node:14.16
